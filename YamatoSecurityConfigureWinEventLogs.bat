@@ -22,7 +22,7 @@ wevtutil sl Security /ms:1073741824
 wevtutil sl Microsoft-Windows-PowerShell/Operational /ms:1073741824
 wevtutil sl "Windows PowerShell" /ms:1073741824
 wevtutil sl PowerShellCore/Operational /ms:1073741824
-::wevtutil sl Microsoft-Windows-Sysmon/Operational /ms:1073741824
+wevtutil sl Microsoft-Windows-Sysmon/Operational /ms:1073741824
 
 :: Set all other important logs to 128 MB. Increase or decrease to fit your environment.
 wevtutil sl System /ms:134217728
@@ -170,3 +170,5 @@ auditpol /set /subcategory:{0CCE9210-69AE-11D9-BED3-505054503030} /success:enabl
 auditpol /set /subcategory:{0CCE9211-69AE-11D9-BED3-505054503030} /success:enable /failure:enable
 :::: System Integrity
 auditpol /set /subcategory:{0CCE9212-69AE-11D9-BED3-505054503030} /success:enable /failure:enable
+
+pause
